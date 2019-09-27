@@ -16,6 +16,12 @@ class Child extends Person {
         this.salary = salary
     }
 
+    @Override
+    public String toString() {
+        return "${name} is a man aged ${age} who lives at ${address}. He works for ${company} with employee id ${empId} and draws ${salary} lots of money !!!!."
+    }
+
+
     public static void main(String[] args) {
         def child = new Child("John", 30, "Male", "USA", "OO08", "Amazon", 1000000l)
 
@@ -38,6 +44,6 @@ class Child extends Person {
                 + "Salary:: " + child.getSalary())
 
         System.out.println("\nUsing toString()::")
-        System.out.println("Child details:: \n" + child)
+        System.out.println(">>> \n" + child)
     }
 }
